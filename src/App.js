@@ -1,11 +1,10 @@
 import React from "react";
-import TreeDiagram from "./tree";
-import "./style.css";
-
+import Desc from "./t"
+import  './s.css';
 function App() {
   return (
     <div className="App">
-      <TreeDiagram />
+      <Desc/>
     </div>
   );
 }

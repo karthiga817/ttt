@@ -4,15 +4,15 @@ const hod = {
   id: 1,
   name: "Mr. Perumal Raja",
   position: "HoD",
-  image: "https://via.placeholder.com/80",
+  image: "images/HOD.jpg",
   subordinates: [
-    { id: 2, name: "Coordinator 1", image: "https://via.placeholder.com/80" },
+    { id: 2, name: "Coordinator 1", image: "images/KR.SENTHIL MURUGAN.jpg" },
     { id: 3, name: "Company representative", image: "https://via.placeholder.com/80" },
     { id: 4, name: "Company representative", image: "https://via.placeholder.com/80" },
     { id: 8, name: "New Representative", image: "https://via.placeholder.com/80" },
     { id: 5, name: "Company representative", image: "https://via.placeholder.com/80" },
     { id: 6, name: "Company representative", image: "https://via.placeholder.com/80" },
-    { id: 7, name: "Coordinator 2", image: "https://via.placeholder.com/80" },
+    { id: 7, name: "Coordinator 2", image: "images/Murali.png" },
   ],
 };
 

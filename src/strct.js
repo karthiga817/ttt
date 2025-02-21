@@ -104,11 +104,11 @@ const OrgChart = () => {
       </div>
       
       <div className="tl-container">
-        {tl.map((member) => (
-          <div key={member.id} className="tl-node">
+        {tl.map((tl) => (
+          <div key={tl.id} className="tl-node">
             <div className="tl-content">
-              <img src={member.image} alt={member.name} className="faculty-img" />
-              <p>{member.name}</p>
+              <img src={tl.image} alt={tl.name} className="tl-img" />
+              <p>{tl.name}</p>
             </div>
           </div>
         ))}

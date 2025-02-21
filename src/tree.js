@@ -1,103 +1,167 @@
 import React from "react";
-import "./style.css";
+import { Card, CardContent, Typography } from "@mui/material";
+import PersonIcon from "@mui/icons-material/Person";
+import "./style.css"; // Ensure you import the CSS file
 
 const hierarchyData = {
   name: "HOD",
-  image: "/images/hod.png",
+  image: "/abc/image.png",
   children: [
     {
       name: "Coordinator 1",
-      image: "/images/coordinator1.png",
-      children: []
+      image: "/abc/image.png",
+      children: [
+        {
+          name: "Gen AI",
+          image: "/abc/image.png",
+          children: [
+            {
+              name: "Faculty Incharge",
+              image: "/abc/image.png",
+              children: [
+                {
+                  name: "Team Leader",
+                  image: "/abc/image.png",
+                  children: [
+                    {
+                      name: "Trainers",
+                      image: "/abc/image.png",
+                      children: [
+                        { name: "Trainees", image: "/abc/image.png" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Company representative",
+      image: "/abc/image.png",
+      children: [
+        {
+          name: "AI/ML",
+          image: "/abc/image.png",
+          children: [
+            {
+              name: "Faculty Incharge",
+              image: "/abc/image.png",
+              children: [
+                {
+                  name: "Team Leader",
+                  image: "/abc/image.png",
+                  children: [
+                    {
+                      name: "Trainers",
+                      image: "/abc/image.png",
+                      children: [
+                        { name: "Trainees", image: "/abc/image.png" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: "Company Representative 1",
+      image: "/abc/image.png",
+      children: [
+        {
+          name: "Fullstack",
+          image: "/abc/image.png",
+          children: [
+            {
+              name: "Faculty Incharge",
+              image: "/abc/image.png",
+              children: [
+                {
+                  name: "Team Leader",
+                  image: "/abc/image.png",
+                  children: [
+                    {
+                      name: "Trainers",
+                      image: "/abc/image.png",
+                      children: [
+                        { name: "Trainees", image: "/abc/image.png" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       name: "Coordinator 2",
-      image: "/images/coordinator2.png",
-      children: []
+      image: "/abc/image.png",
+      children: [
+        {
+          name: "AR/VR",
+          image: "/abc/image.png",
+          children: [
+            {
+              name: "Faculty Incharge",
+              image: "/abc/image.png",
+              children: [
+                {
+                  name: "Team Leader",
+                  image: "/abc/image.png",
+                  children: [
+                    {
+                      name: "Trainers",
+                      image: "/abc/image.png",
+                      children: [
+                        { name: "Trainees", image: "/abc/image.png" }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 };
 
-const coordinator1Children = [
-  {
-    name: "AI/ML Incharge",
-    image: "/images/aiml.png",
-    children:
-    [
-      {
-        name: "Team lead (AI/ML)",
-        image: "/images/trainer1.png",
-        children:
-        [
-          { name: "Trainer 1", image: "/images/trainee1.png" },
-          { name: "Trainer 2", image: "/images/trainee2.png" }
-          
-          ]
-      }
+// Hierarchy Card Component
+const HierarchyCard = ({ name, image }) => (
+  <div className="tree-node">
+    <Card className="node">
+      <CardContent>
+        {image ? (
+          <img src={image} alt={name} className="profile-image" />
+        ) : (
+          <PersonIcon fontSize="large" />
+        )}
+        <Typography className="node-name">{name}</Typography>
+      </CardContent>
+    </Card>
+  </div>
+);
 
-    ]
-  },
-  {
-    name: "AR/VR Incharge",
-    image: "/images/arvr.png",
-    children: [
-      {
-        name: "Trainer 1 (AR/VR)",
-        image: "/images/trainer2.png",
-        children: [
-          { name: "Trainee 1", image: "/images/trainee3.png" },
-          { name: "Trainee 2", image: "/images/trainee4.png" }
-        ]
-      }
-    ]
-  }
-];
-
-const coordinator2Children = [
-  {
-    name: "Mobile App Incharge",
-    image: "/images/mobile.png",
-    children: [
-      {
-        name: "Trainer 1 (Mobile App)",
-        image: "/images/trainer3.png",
-        children: [
-          { name: "Trainee 1", image: "/images/trainee5.png" },
-          { name: "Trainee 2", image: "/images/trainee6.png" }
-        ]
-      }
-    ]
-  },
-  {
-    name: "Full Stack Incharge",
-    image: "/images/fullstack.jpeg",
-    children: [
-      {
-        name: "Trainer 1 (Full Stack)",
-        image: "/images/trainer4.png",
-        children: [
-          { name: "Trainee 1", image: "/images/trainee7.png" },
-          { name: "Trainee 2", image: "/images/trainee8.png" }
-        ]
-      }
-    ]
-  }
-];
-
-hierarchyData.children[0].children = coordinator1Children;
-hierarchyData.children[1].children = coordinator2Children;
-
-const TreeNode = ({ node }) => {
+// Recursive function to render the hierarchy tree
+const renderHierarchy = (node) => {
+  if (!node) return null;
   return (
     <div className="tree-node">
-      <div className="node">
-        <img src={node.image} alt={node.name} className="profile-image" />
-        <span className="node-name">{node.name}</span>
-      </div>
-      {node.children && node.children.length > 0 && (
+      <HierarchyCard name={node.name} image={node.image} />
+      {node.children?.length > 0 && (
         <div className="children">
           {node.children.map((child, index) => (
-            <TreeNode key={index} node={child} />
+            <div className="tree-node" key={index}>
+              {renderHierarchy(child)}
+            </div>
           ))}
         </div>
       )}
@@ -105,14 +169,9 @@ const TreeNode = ({ node }) => {
   );
 };
 
+// Main Hierarchy Tree Component
 const HierarchyTree = () => {
-  return (
-    <div className="tree-container">
-      <div className="hierarchy-wrapper">
-        <TreeNode node={hierarchyData} />
-      </div>
-    </div>
-  );
+  return <div className="tree-container">{renderHierarchy(hierarchyData)}</div>;
 };
 
-export default HierarchyTree;
+export default HierarchyTree;

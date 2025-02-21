@@ -1,4 +1,4 @@
-body, html {
+/*body, html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -52,7 +52,6 @@ body, html {
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Fade-in effect when the card enters viewport */
 .card.fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -84,8 +83,8 @@ body, html {
   border-radius: 12px;
   object-fit: cover;
   transition: opacity 1s ease-in-out, transform 0.3s ease-in-out;
-    image-rendering: -webkit-optimize-contrast; /* For WebKit browsers */
-    image-rendering: crisp-edges; /* Helps in Firefox */
+    image-rendering: -webkit-optimize-contrast; 
+    image-rendering: crisp-edges; 
     image-rendering: high-quality;  
 }
 
@@ -107,7 +106,6 @@ body, html {
   color: #1abc9c;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -134,3 +132,76 @@ body, html {
     padding: 15px;
   }
 }
+
+.organization-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.hod-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hod-content {
+  text-align: center;
+  background-color: #d4b5a5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hod-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.position {
+  font-weight: bold;
+}
+
+.horizontal-line {
+  width: 400px;
+  height: 2px;
+  background-color: black;
+  margin-top: 10px;
+}
+
+.subordinates-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+}
+
+.subordinate-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 20px;
+  background-color: black;
+  position: relative;
+}
+
+.subordinate-content {
+  text-align: center;
+  background-color: #d4b5a5;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.subordinate-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+*/

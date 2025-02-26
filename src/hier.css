@@ -1,0 +1,19 @@
+.full-width-image {
+    width: 100vw; /* Full width */
+    margin: 0; /* Remove extra spacing */
+    padding: 0; /* Remove extra spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    display: block;
+    position: relative;
+}
+img {
+    transition: none !important;
+}

@@ -1,14 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//import OrgChart from './strct';
+//import './sty.css';
 //import './index.css';
-//import './s.css';
-//import Desc from './t';
-import OrgChart from './strct';
-import './sty.css';
+import './s.css';
+import Slider from './t';
+import TitleBar from './titl';
+import  './tit.css';
+import Hierarchy from "./hierarchy";
+import "./hier.css";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <OrgChart/>
+    <TitleBar/>
+    <Slider/>
+    <Hierarchy/>
+    
   </React.StrictMode>
 );
 

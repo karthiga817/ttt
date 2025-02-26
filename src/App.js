@@ -1,13 +1,19 @@
 import React from "react";
-//import Desc from "./t"
-//import  './s.css';
-//import HierarchyTree from "./tree";
-import OrgChart from "./strct";
-import './sty.css';
-function App() {
+
+//import OrgChart from "./strct";
+//import './sty.css';
+import Slider from "./t"
+import  './s.css';
+import TitleBar from "./titl";
+import './tit.css';
+import Hierarchy from "./hierarchy";
+import "./hier.css";
+function App() { 
   return (
     <div className="App">
-      <OrgChart/>
+    <TitleBar/>
+    <Slider/>
+    <Hierarchy/>
     </div>
   );
 }

@@ -27,7 +27,7 @@ const domains = [
 ];
 
 const faculty = [
-  { id: 9, name: "Domain 1", image: "https://via.placeholder.com/80" },
+  { id: 9, name: "Domain 1", image: "image/cloud/fm.PNG" },
   { id: 10, name: "Domain 2", image: "https://via.placeholder.com/80" },
   { id: 11, name: "Domain 3", image: "https://via.placeholder.com/80" },
   { id: 12, name: "Domain 4", image: "https://via.placeholder.com/80" },

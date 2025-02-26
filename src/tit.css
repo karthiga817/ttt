@@ -1,0 +1,90 @@
+/* Top bar styling */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 2px solid #ddd;
+    font-family: 'Times New Roman', serif;  /* Corrected font-family */
+    font-size: 100px;                        /* Adjust the size to match */
+    font-weight: 900;                        /* Extra bold */
+    text-transform: uppercase;               /* Convert text to uppercase */
+    color: #0d1b2a;                          /* Dark navy color */
+    letter-spacing: 1px;                     /* Slight spacing for readability */
+}
+
+  .logo {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .search-box {
+    display: flex;
+    align-items:center;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  .search-icon {
+    font-size: 20px;
+    color: gray;
+    cursor: pointer;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .social-icons svg {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  /* Navigation Bar Styling */
+  .nav-bar {
+    background-color: #0d1b2a;
+    padding: 10px 0;
+  }
+  
+  .nav-bar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .nav-bar ul li {
+    margin: 0 15px;
+  }
+  
+  .nav-bar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .nav-bar ul li a:hover {
+    color: #ff9800;
+  }
+  

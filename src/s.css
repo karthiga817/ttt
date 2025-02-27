@@ -5,7 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E3F2FD;
+  
+  background: linear-gradient(to bottom, #1E3A8A, #0F172A);
+
   position: relative;
 }
 
@@ -35,13 +37,13 @@
   border: none;
   cursor: pointer;
   font-size: 2rem;
-  color: #007bff;
+  color: #f4f5f6;
   transition: color 0.3s;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-  color: #0056b3;
+  color: #fafbfc;
 }
 
 .full-width-image img {

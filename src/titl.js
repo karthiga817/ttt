@@ -9,7 +9,7 @@ const TitleBar = () => {
       {/* Top bar with logo, search, and social icons */}
       <div className="top-bar">
         <div className="logo">
-          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/Kumaraguru_College_of_Technology_logo.svg/1200px-Kumaraguru_College_of_Technology_logo.svg.png" alt="VCET Logo" />
+          <img src="images/vcet.png" alt="VCET Logo" />
           <span>VELLAMMAL COLLEGE OF ENGINEERINGA & TECHNOLOGY</span>
         </div>
 

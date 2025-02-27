@@ -10,17 +10,18 @@ const Hierarchy = () => {
   const MAP = {
     name: "train-the-trainer-map",
     areas: [
-      { name: "Dr. Perumal Raja", shape: "circle", coords: [300, 50, 40] ,href:"https://www.google.com"},
+      { name: "Dr. Perumal Raja", shape: "circle", coords: [409, 64, 34], href: "https://www.google.com" },
       { name: "IamGowtham", shape: "circle", coords: [120, 150, 30] },
       { name: "Aakash Illayaseelan", shape: "circle", coords: [240, 150, 30] },
       { name: "Rohit Ananda", shape: "circle", coords: [360, 150, 30] },
       { name: "Sivasubramanian", shape: "circle", coords: [480, 150, 30] },
       { name: "Dilip Kumar", shape: "circle", coords: [600, 150, 30] },
       { name: "Dr. Rizal Muham", shape: "circle", coords: [720, 150, 30] },
+      { name: "Mr.KR.Senthil Murugan", shape: "circle", coords: [158, 234, 20] },
+      { name: "Fullstack", shape: "rect", coords:[226,316,24], href: "https://www.google.com"} // Fixed href
     ],
   };
 
-  // Function to scale coordinates based on the current image width
   const scaleMap = (currentWidth) => {
     const scaleFactor = currentWidth / originalWidth;
     return {
@@ -28,13 +29,12 @@ const Hierarchy = () => {
       areas: MAP.areas.map(area => ({
         ...area,
         coords: area.coords.map((coord, index) =>
-          index === 2 ? coord * scaleFactor : Math.round(coord * scaleFactor) // Keep radius proportional
+          index === 2 ? Math.round(coord * scaleFactor) : Math.round(coord * scaleFactor) // Keep radius proportional
         ),
       })),
     };
   };
 
-  // Update map when image resizes
   useEffect(() => {
     const handleResize = () => {
       const container = document.getElementById("image-container");
@@ -46,7 +46,7 @@ const Hierarchy = () => {
     };
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call once initially
+    handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -55,9 +55,10 @@ const Hierarchy = () => {
     <div id="image-container" style={{ maxWidth: "100%", textAlign: "center" }}>
       {scaledMap && (
         <ImageMapper
-          src="/images/heir.png"
+          src="/images/t.png"
           map={scaledMap}
           width={imageWidth}
+          onLoad={() => setScaledMap(scaleMap(imageWidth))} // Ensure image loads before mapping
         />
       )}
     </div>

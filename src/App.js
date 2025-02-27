@@ -12,8 +12,9 @@ function App() {
   return (
     <div className="App">
     <TitleBar/>
-    <Slider/>
     <Hierarchy/>
+    <Slider/>
+    
     </div>
   );
 }

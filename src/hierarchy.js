@@ -10,7 +10,7 @@ const Hierarchy = () => {
   const MAP = {
     name: "train-the-trainer-map",
     areas: [
-      { name: "Dr. Perumal Raja", shape: "circle", coords: [409, 64, 34], href: "https://www.google.com" },
+      { name: "Dr. Perumal Raja", shape: "circle", coords: [409, 64, 34]},
       { name: "IamGowtham", shape: "circle", coords: [120, 150, 30] },
       { name: "Aakash Illayaseelan", shape: "circle", coords: [240, 150, 30] },
       { name: "Rohit Ananda", shape: "circle", coords: [360, 150, 30] },
@@ -18,7 +18,13 @@ const Hierarchy = () => {
       { name: "Dilip Kumar", shape: "circle", coords: [600, 150, 30] },
       { name: "Dr. Rizal Muham", shape: "circle", coords: [720, 150, 30] },
       { name: "Mr.KR.Senthil Murugan", shape: "circle", coords: [158, 234, 20] },
-      { name: "Fullstack", shape: "rect", coords:[226,316,24], href: "https://www.google.com"} // Fixed href
+      { name: "AR/VR", shape: "circle", coords: [55, 422, 20], href: "http://localhost:3001/ArVr" },
+      { name: "AI/ML", shape: "circle", coords: [160, 422, 20],href: "http://localhost:3001/machine-learning"  },
+      { name: "Full Stack", shape: "circle", coords: [294, 422, 20],href:"http://localhost:3001/fullstack"},
+      { name: "Mobile App Development", shape: "circle", coords: [470, 422, 20] ,href:"http://localhost:3001/aad"},
+      { name: "Cloud Computing", shape: "circle", coords: [550, 422, 20],href:"http://localhost:3001/cloud-computing" },
+      { name: "Data Analytics", shape: "circle", coords: [630, 422, 20] ,href:"http://localhost:3001/Data-analyst"},
+      { name: "Gen-AI", shape: "circle", coords: [740, 422, 20] ,href:"http://localhost:3001/Dsa"}
     ],
   };
 

@@ -1,22 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import OrgChart from './strct';
-//import './sty.css';
-//import './index.css';
+
 import './s.css';
 import Slider from './t';
-import TitleBar from './titl';
-import  './tit.css';
-import Hierarchy from "./hierarchy";
-import "./hier.css";
+//import TitleBar from './titl';
+//import  './tit.css';
+import Chat from './chat.js';
+import './chat.css';
+import Maz from './maz.js';
+import './maz.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <TitleBar/>
-    <Hierarchy/>
+    <Maz/>
     <Slider/>
-    
-    
+    <Chat/>
   </React.StrictMode>
 );
 

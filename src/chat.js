@@ -1,47 +1,34 @@
 import React, { useState } from "react";
-import { IoIosSearch } from "react-icons/io";
-import { IoMdSend } from "react-icons/io";
-import "./s.css";
+import "./chat.css"; // Import CSS styles
+import { X, MessageCircle } from "lucide-react"; // For icons
 
 const Chatbot = () => {
-  const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleSend = () => {
-    if (input.trim() !== "") {
-      setMessages([...messages, { text: input, sender: "user" }]);
-      setInput("");
-
-      // Simulated bot response
-      setTimeout(() => {
-        setMessages((prevMessages) => [
-          ...prevMessages,
-          { text: "Hello! How can I assist you?", sender: "bot" },
-        ]);
-      }, 1000);
-    }
+  const toggleChat = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="chat-container">
-      <div className="chat-box">
-        {messages.map((msg, index) => (
-          <div key={index} className={`message ${msg.sender}`}>
-            {msg.text}
-          </div>
-        ))}
+    <div className="chatbot-container">
+      {/* Chatbot Icon */}
+      <div className="chatbot-icon" onClick={toggleChat}>
+        <MessageCircle size={28} color="white" />
       </div>
 
-      <div className="chat-input-box">
-        <input
-          type="text"
-          placeholder="Type a message..."
-          className="chat-input"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleSend()}
-        />
-        <IoMdSend className="send-icon" onClick={handleSend} />
+      {/* Chat Window */}
+      <div className={`chat-window ${isOpen ? "open" : "closed"}`}>
+        <div className="chat-header">
+          <h3>Tim Buddy</h3>
+          <X size={20} onClick={toggleChat} className="close-btn" />
+        </div>
+        <div className="chat-body">
+          <p><strong>Tim Buddy:</strong> Hello! How can I help you?</p>
+        </div>
+        <div className="chat-footer">
+          <input type="text" placeholder="Type a message..." />
+          <button>Send</button>
+        </div>
       </div>
     </div>
   );

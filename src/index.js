@@ -1,19 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import './s.css';
-import Slider from './t';
+//import './s.css';
+//import Slider from './t';
 //import TitleBar from './titl';
 //import  './tit.css';
 import Chat from './chat.js';
 import './chat.css';
-import Maz from './maz.js';
-import './maz.css';
+//import Maz from './maz.js';
+//import './maz.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Maz/>
-    <Slider/>
     <Chat/>
   </React.StrictMode>
 );

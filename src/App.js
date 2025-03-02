@@ -1,6 +1,6 @@
 import React from "react";
-//import Slider from "./t"
-//import  './s.css';
+import Slider from "./t"
+import  './s.css';
 //import TitleBar from "./titl";
 //import './tit.css';
 //import Chat from './maz.js';
@@ -12,8 +12,8 @@ import './chat.css';
 function App() { 
   return (
     <div className="App">
-    <Chat/>
-    
+    <Slider/>
+    <Chat/>    
     </div>
   );
 }
